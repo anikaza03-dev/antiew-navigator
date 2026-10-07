@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anti-EW Navigator — Завантажити</title>
+<meta name="description" content="Навігатор із захистом від РЕБ. Працює при глушінні GPS через датчики пристрою. Завантажте Android-застосунок.">
+<style>
+  :root{
+    --bg:#090d16; --panel:#11141c; --border:rgba(255,255,255,.09);
+    --text:#f0f4f8; --muted:#8a94a6; --green:#34c759; --blue:#007aff; --orange:#ff9500;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--bg); color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    min-height:100vh; line-height:1.55;
+    background-image:radial-gradient(ellipse at 50% -10%, rgba(52,199,89,.14) 0%, transparent 55%);
+  }
+  .wrap{max-width:640px;margin:0 auto;padding:48px 22px 64px}
+  .badge{
+    display:inline-flex;align-items:center;gap:8px;padding:6px 14px;border-radius:99px;
+    border:1px solid rgba(52,199,89,.35);background:rgba(52,199,89,.1);
+    font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--green);
+  }
+  .badge .dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 1.6s infinite}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+  .hero{text-align:center;margin-top:28px}
+  .logo{
+    width:88px;height:88px;border-radius:24px;margin:0 auto 22px;
+    display:flex;align-items:center;justify-content:center;
+    background:linear-gradient(135deg,rgba(52,199,89,.22),rgba(0,122,255,.14));
+    border:1px solid rgba(52,199,89,.3);
+  }
+  .logo svg{width:46px;height:46px;color:var(--green)}
+  h1{font-size:30px;font-weight:700;line-height:1.2;letter-spacing:-.01em}
+  h1 span{color:var(--green)}
+  .sub{color:var(--muted);font-size:15px;margin-top:12px;max-width:440px;margin-left:auto;margin-right:auto}
+
+  .dl{
+    display:flex;align-items:center;justify-content:center;gap:11px;
+    margin:30px auto 0;padding:17px 28px;width:100%;max-width:340px;
+    border:none;border-radius:16px;cursor:pointer;text-decoration:none;
+    background:var(--green);color:#042; font-size:17px;font-weight:700;
+    box-shadow:0 10px 30px rgba(52,199,89,.28);transition:transform .12s,box-shadow .2s;
+  }
+  .dl:hover{box-shadow:0 14px 38px rgba(52,199,89,.4)}
+  .dl:active{transform:scale(.97)}
+  .dl svg{width:22px;height:22px}
+  .meta{text-align:center;color:var(--muted);font-size:13px;margin-top:12px}
+  .meta b{color:var(--text);font-weight:600}
+
+  .card{
+    background:var(--panel);border:1px solid var(--border);border-radius:18px;
+    padding:22px 24px;margin-top:22px;
+  }
+  .card h2{font-size:14px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+  ol{margin:0;padding-left:20px}
+  ol li{margin-bottom:11px;font-size:15px}
+  ol li:last-child{margin-bottom:0}
+  .warn{
+    display:flex;gap:10px;margin-top:16px;padding:12px 14px;border-radius:12px;
+    background:rgba(255,149,0,.08);border:1px solid rgba(255,149,0,.22);
+    font-size:13px;color:#ffcf99;
+  }
+  .warn svg{width:16px;height:16px;flex-shrink:0;color:var(--orange);margin-top:2px}
+
+  .feat{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+  .feat div{background:var(--panel);border:1px solid var(--border);border-radius:14px;padding:16px}
+  .feat .ft{font-weight:700;font-size:14px;margin-bottom:4px;display:flex;align-items:center;gap:8px}
+  .feat .ft svg{width:16px;height:16px}
+  .feat .fd{color:var(--muted);font-size:13px}
+  .feat .g svg{color:var(--green)} .feat .b svg{color:var(--blue)} .feat .o svg{color:var(--orange)}
+
+  footer{text-align:center;color:var(--muted);font-size:12px;margin-top:36px;line-height:1.8}
+  footer a{color:var(--muted)}
+  @media(max-width:480px){.feat{grid-template-columns:1fr}h1{font-size:25px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div style="text-align:center"><span class="badge"><span class="dot"></span>Anti-EW Navigator</span></div>
+
+  <div class="hero">
+    <div class="logo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" fill="currentColor" stroke="none"/>
+      </svg>
+    </div>
+    <h1>Навігатор <span>із захистом від РЕБ</span></h1>
+    <p class="sub">Веде маршрутом навіть при глушінні GPS — через компас, акселерометр і гіроскоп пристрою.</p>
+
+    <a class="dl" href="antiew-navigator-v2.1.apk" download>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      Завантажити для Android
+    </a>
+    <p class="meta">APK · версія <b>2.1</b> · 5.8 МБ · Android 7.0+</p>
+  </div>
+
+  <div class="feat">
+    <div><div class="ft g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="1" y1="1" x2="23" y2="23"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55M5 12.55a10.94 10.94 0 0 1 5.17-2.39M10.71 5.05A16 16 0 0 1 22.56 9M1.42 9a15.91 15.91 0 0 1 4.7-2.88M8.53 16.11a6 6 0 0 1 6.95 0M12 20h.01"/></svg>Режим без GPS</div><div class="fd">Навігація працює при повному глушінні супутникового сигналу.</div></div>
+    <div><div class="ft b"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>Виявлення спуфінгу</div><div class="fd">Автоматично визначає підміну координат і пропонує перейти на датчики.</div></div>
+    <div><div class="ft o"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>Компас і крокомір</div><div class="fd">Dead reckoning: рахунок кроків для пішоходів, інерція для авто.</div></div>
+    <div><div class="ft g"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Офлайн-карти</div><div class="fd">Кешування тайлів уздовж маршруту для роботи без мережі.</div></div>
+  </div>
+
+  <div class="card">
+    <h2>Як встановити</h2>
+    <ol>
+      <li>Натисніть <b>«Завантажити для Android»</b> — завантажиться файл <code>.apk</code>.</li>
+      <li>Відкрийте завантажений файл (у шторці сповіщень або в «Завантаженнях»).</li>
+      <li>Android попросить <b>дозволити встановлення з цього джерела</b> — натисніть «Налаштування» → увімкніть дозвіл → поверніться назад.</li>
+      <li>Натисніть <b>«Встановити»</b>, після встановлення — <b>«Відкрити»</b>.</li>
+      <li>При першому запуску надайте доступ до <b>геолокації</b> та <b>датчиків руху</b>.</li>
+    </ol>
+    <div class="warn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+      <span>Застосунок ще не опубліковано в Google Play, тому встановлення відбувається вручну. Це тестова версія — дякуємо, що допомагаєте її перевірити.</span>
+    </div>
+  </div>
+
+  <footer>
+    Anti-EW Navigator · тестова збірка v2.1<br>
+    Створено для цивільних і захисників в умовах РЕБ
+  </footer>
+
+</div>
+</body>
+</html>
